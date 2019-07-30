@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comp atible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+//         Phí thuê bao bắt buộc là 25 nghìn.
+        // 600 đồng cho mỗi phút gọi của 50 phút đầu tiên.
+        // 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+        // 200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.
+
+        let phiThueBao =25;
+        let cuocThueBao ;
+        let phiMoiPhut;
+        let soPhutDaDung;
+        let rs = soPhutMacDinh * 50 + 25;
+        soPhutDaDung = prompt("Moi Ban Nhap So Phut Da dung:");
+        if(soPhutDaDung>200)
+        {
+            cuocThueBao = (soPhutDaDung-200)*200+150*400+50*600;
+        }
+        else if(soPhutDaDung>50)
+        {
+            cuocThueBao = (soPhutDaDung-50)*400+50*600;
+        }
+        else 
+        {
+            cuocThueBao = soPhutDaDung * 50;
+        }
+        
+        let tong = cuocThueBao + phiThueBao;
+        alert("Cuoc dien thoai cua ban la:"+tong);
+    </script>
+</body>
+</html>
