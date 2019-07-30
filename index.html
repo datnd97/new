@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    bai 1:  Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+        let a = prompt("Moi ban nhap so a:");
+
+        let b = prompt("Moi ban nhap so b:");
+
+        let chiaHet = a % b;
+
+        alert(chiaHet == 0 ? "A chia het cho B" : "A khong chia het cho B");
+        //  Bai 2:  Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+        let tuoi = prompt("Moi ban nhap tuoi:");
+        let kiemTraTuoi = tuoi < 15;
+        alert(kiemTraTuoi ? "Ban khong du tuoi hoc lop 10" : "Ban du tuoi vao lop 10")
+        // Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+        let soNguyen = prompt("Moi ban nhap so nguyen:");
+        let kiemTraSoNguyen = soNguyen > 0;
+        alert(kiemTraSoNguyen ? "Day la so lon khong" : "Day la so nho hon khong");
+        // Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+        let num1 = prompt("Moi ban nhap so thu nhat:");
+        let num2 = prompt("Moi ban nhap so thu hai:");
+        let num3 = prompt("Moi ban nhap so thu ba:");
+
+        let max = num1;
+        if (max < num2) {
+            max = num2;
+        }
+         if (max < num3) {
+            max = num3;
+        }
+        alert("So lon nhat la:" + max);
+        // Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+        // output:Điểm trung bình >= 9.0 là hạng A.
+
+        // Điểm trung bình >=7.0 và < 9.0 là hạng B
+
+        // Điểm trung bình >=5.0 và < 7.0 là hạng C
+
+        // Điểm trung bình <5.0 là hạng F 
+
+        let diem = prompt("Moi ban nhap diem:");
+        if (diem >= 9) {
+            alert("hang A");
+        }
+        else if (diem < 9 && diem >= 7) {
+            alert("hang B");
+        }
+        else if (diem >= 5 && diem < 7) {
+            alert("hang C");
+        }
+        else if (diem <= 5) {
+            alert("Hang F");
+        }
+        //    Bai 6:Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được. Với mức hoa hồng theo doanh số bán hàng như sau:
+        // 5 % nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+        // 10 % nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+        // 20 % nếu tổng doanh số là lớn hơn 300 triệu.
+        
+
+        let tienHoaHong ;
+        let tongDoanhThu = prompt('Moi ban nhap tong danh thu');
+        tongDoanhThu = parseInt(tongDoanhThu);
+        if(tongDoanhThu >= 300)
+        {
+            tienHoaHong = 5 * tongDoanhThu/100;
+        }
+        else if(tongDoanhThu <= 300)
+        {
+            tienHoaHong = 10 *tongDoanhThu/100;
+        }
+        else
+        {
+            tienHoaHong = 20 * tongDoanhThu/100;
+        }
+
+        alert("Tien hoa hong ban nhan duoc la:"+tienHoaHong);
+        // Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+//         Phí thuê bao bắt buộc là 25 nghìn.
+        // 600 đồng cho mỗi phút gọi của 50 phút đầu tiên.
+        // 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+        // 200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.
+
+        let phiThueBao =25;
+        let cuocThueBao ;
+        let phiMoiPhut;
+        let soPhutDaDung;
+        let rs = soPhutMacDinh * 50 + 25;
+        soPhutDaDung = prompt("Moi Ban Nhap So Phut Da dung:");
+        if(soPhutDaDung>200)
+        {
+            cuocThueBao = (soPhutDaDung-200)*200+150*400+50*600;
+        }
+        else if(soPhutDaDung>50)
+        {
+            cuocThueBao = (soPhutDaDung-50)*400+50*600;
+        }
+        else 
+        {
+            cuocThueBao = soPhutDaDung * 50;
+        }
+        
+        let tong = cuocThueBao + phiThueBao;
+        alert("Cuoc dien thoai cua ban la:"+tong);
+    </script>
+</body>
+
+</html>
